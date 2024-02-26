@@ -1,0 +1,12 @@
+name: ci-node-worflow
+on: [push]
+jobs:
+  check-application:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: action/checkout@v4
+      - uses: action/setup-node@v4
+        with:
+          node-version: 18
+      - run: npm test
+      
