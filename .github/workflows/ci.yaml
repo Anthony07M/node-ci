@@ -1,8 +1,7 @@
 name: ci-node-worflow
 on: 
-  pull_request: 
-    branches: 
-      - develop
+  pull_request:  
+    types: [opened, reopened]
 jobs:
   check-application:
     runs-on: ubuntu-latest
